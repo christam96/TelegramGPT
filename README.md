@@ -1,1 +1,4 @@
-# telegram_gpt
+# TelegramGPT
+
+A GPT interface for exported Telegram conversations.
+
