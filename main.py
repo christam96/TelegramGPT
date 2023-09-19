@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from langchain.vectorstores import Chroma
 from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import TelegramChatFileLoader
@@ -15,7 +17,8 @@ from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 # from langchain.indexes import VectorstoreIndexCreator
 
-SECRET_KEY = "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"
+load_dotenv()
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Instantiate model
 llm = ChatOpenAI(openai_api_key=SECRET_KEY)
