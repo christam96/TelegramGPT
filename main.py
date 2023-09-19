@@ -16,7 +16,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 llm = ChatOpenAI(openai_api_key=SECRET_KEY)
 
 # Load Telegram data
-loader = TelegramChatFileLoader("Data/result.json")
+loader = TelegramChatFileLoader("conversations/ZKP deck.json")
 text_splitter = RecursiveCharacterTextSplitter(
     # Set a really small chunk size, just to show.
     chunk_size = 1000,
