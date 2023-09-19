@@ -1,4 +1,9 @@
 # TelegramGPT
 
-A GPT interface for exported Telegram conversations.
+V0: A ChatGPT-like interface for Telegram conversations.
 
+V1: Indexing [WIP]
+- Avoid loading and recomputing embeddings over unchanged content
+- Strategy:
+    - Make use of a `RecordManager` to keep track of document writes into the vector store.
+    - Need to re-populate `vectorestore` with documents since it doesn't have context for previously inserted embeddings
